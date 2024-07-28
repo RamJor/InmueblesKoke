@@ -1,5 +1,6 @@
 /*leer un enpoint para accder y leer o mandar información para crear datos*/
 var holder =document.getElementById('holder');
+var formulario = document.getElementById('form');
 var endpoint="http://localhost/InmueblesKoke/conexion.php";
 /*Utilizar metodo open; el metodo GET para obtener información*/
 var xhr = new XMLHttpRequest();
@@ -17,6 +18,7 @@ function loadSelectedData(e) {
     var dataJson =  (JSON.parse(e.target.responseText).data);
     /*metodo stringify lo muestra en cadenas y parse lo convierte en un arreglo*/
     dataDomInsert (dataJson);
+    console.log(dataDomInsert)
     /* si la petición viene con un formato de arreglo la consola regresara un error*/
     /*estos datos van en el div holder*/
     
@@ -28,13 +30,24 @@ function dataDomInsert(arrayData) {
     var domContent=""
     for (let i = 0, l= arrayData.length; i < l; i++) {
         console.log(arrayData[i]);
-        domContent += "<h2>"+arrayData[i].id + " -"+ arrayData[i].property+ "</h2>" +
+        domContent += "<h2>"+arrayData[i].id + " -"+ arrayData[i].proprety+ "</h2>" +
         "<p> Location:" + arrayData[i].location + " </p>" +
-        "<p> Price:" + arrayData[i].price + "</p>" ;
+        "<p> Price:" + arrayData[i].Precio + "</p>" ;
         
     }
 
     holder.innerHTML= domContent;
 }
 
+/*Validando el formularios*/
+
+formulario.addEventListener ( 'submit', function(e) {
+    e.preventDefault();
+    const id = document.querySelector("").value
+    const price = document.querySelector("").value
+    const property = document.querySelector("").value
+    const locationn = document.querySelector("").value
+    const availablel = document.querySelector("").value
+    
+})
 
