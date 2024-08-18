@@ -41,13 +41,13 @@ function dataDomInsert(arrayData) {
 
 /*Validando el formularios*/
 
-formulario.addEventListener ( 'submit', function(e) {
-    e.preventDefault();
-    const id = document.querySelector("").value
-    const price = document.querySelector("").value
-    const property = document.querySelector("").value
-    const locationn = document.querySelector("").value
-    const availablel = document.querySelector("").value
+// formulario.addEventListener ( 'submit', function(e) {
+//     e.preventDefault();
+//     const id = document.querySelector("").value
+//     const price = document.querySelector("").value
+//     const property = document.querySelector("").value
+//     const locationn = document.querySelector("").value
+//     const availablel = document.querySelector("").value
     
-})
+// })
 
